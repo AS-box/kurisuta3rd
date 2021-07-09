@@ -1,0 +1,197 @@
+@import '../common';
+main{
+  .firstView{
+    @include get_height(464,900);
+    position: relative;
+    .firstView_wrapper{
+      @include get_width(1100,1440);
+      @include get_height(387,900);
+      background: url('../../image/pc/about/heading-img@2x.jpg') no-repeat; 
+      background-size: cover;
+      background-position: center 0;
+      position: relative;
+      h2{
+        font-weight: 700;
+        color: $color-white;
+        position: absolute;
+        top: 50%;
+        transform: translate(50%,-50%);
+        right: 0;
+        font-size:20px;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        .firstView_copy_jp{
+          font-family: "游ゴシック体", YuGothic;
+        }
+        .firstView_copy_main{
+          font-size: 72px;
+        }
+        @media (max-width:768px) {
+          font-size: 16px;
+          transform: translate(30%,-50%);
+          .firstView_copy_main{
+            font-size: 52px;
+          }
+        }
+        @media (max-width:375px) {
+          white-space: nowrap;
+          right: 0;
+        }
+        @media (max-width:320px) {
+          transform: translate(20%,-50%);
+        }
+      }
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      display: block;
+      @include get_width(780,1440);
+      @include get_height(464,900);
+      background-color: #222222;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .section_vision{
+    margin-left: _get_vw(396,1440);
+    margin-top: 120px;
+    h4{
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 30px;
+    }
+    p{
+      margin-top: 30px;
+      line-height: 2;
+    }
+    @media (max-width:768px) {
+      margin-left: _get_vw(150,768);
+    }
+    @media (max-width:375px) {
+      margin-left: _get_vw(15,375);
+    }
+  }
+  .section_massage{
+    @include get_width(1100, 1440);
+    margin:120px auto 0 auto;
+    align-items: flex-start;
+    position: relative;
+    min-height: 900px;
+    padding-top: 144px;
+    img{
+      @include get_width(420, 1440);
+      position: absolute;
+      top: 0;
+    }
+    .section_content{
+      @include get_width(770, 1440);
+      padding: 120px _get_vw(180,1440) 90px _get_vw(180,1440);
+      background: $bg-gray;
+      margin-left: auto;
+      z-index: -1;
+      min-height: 756px;
+      p{
+        margin-top: 30px;
+        line-height: 2;
+      }
+    }
+    @media (max-width:768px) {
+      @include get_width(708, 768);
+      margin:80px auto 0 auto;
+      img{
+        @include get_width(320, 768);
+      }
+      .section_content{
+        @include get_width(494, 768);
+      }
+    }
+    @media (max-width:375px) {
+      @include get_width(360, 375);
+      margin:80px auto 0 auto;
+      img{
+        @include get_width(340, 375);
+      }
+      .section_content{
+        @include get_width(345, 375);
+        margin: auto;
+        padding: 120px _get_vw(28,375) 90px _get_vw(28,375);
+      }
+    }
+  }
+  .section_company{
+    @include get_width(1100, 1440);
+    margin: 120px auto 0;
+    h3{
+      padding-bottom: 30px;
+      border-bottom:2px solid #dddddd;
+    }
+    dl{
+      @include get_width(800, 1440);
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      dt{
+        @include get_width(144, 1440);
+        padding: 20px 0;
+        border-bottom:1px solid #dddddd;
+      }
+      dd{
+        @include get_width(656, 1440);
+        padding: 20px 0;
+        border-bottom:1px solid #dddddd;
+      }
+    }
+    @media (max-width:768px) {
+      @include get_width(708, 768);
+      margin-top: 82px;
+      h3{
+        border-bottom-width: 1px;
+      }
+      dl{
+        @include get_width(678, 768);
+        dt{
+          @include get_width(144, 768);
+        }
+        dd{
+          @include get_width(534, 768);
+        }
+      }
+    }
+    @media (max-width:375px) {
+      @include get_width(345, 375);
+      margin-top: 82px;
+      h3{
+        border-bottom-width: 1px;
+      }
+      dl{
+        margin-left: 0;
+        @include get_width(345, 375);
+        dt{
+          @include get_width(163, 375);
+          font-weight: normal;
+        }
+        dd{
+          @include get_width(178, 375);
+        }
+      }
+    }
+  }
+  .section_map{
+    margin: 40px auto 120px;
+    @include get_width(1100, 1440);
+    height: 360px;
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width:768px) {
+      @include get_width(708, 768);
+      margin: 40px auto 80px;
+    }
+    @media (max-width:375px) {
+      @include get_width(345, 375);
+    }
+  }
+}
